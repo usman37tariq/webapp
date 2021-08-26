@@ -1,6 +1,6 @@
 pipeline {
-   agent any
 
+agent any
 
 stage('Checkout Source') {
 steps {
@@ -24,10 +24,9 @@ myapp.push("${env.BUILD_ID}")
 }
 }
 }
-      stage('Deploy to Cluster') {
-          steps {
-            sh 'envsubst < ${WORKSPACE}/deploy.yaml | kubectl apply -f -'
-          }
-      }
-   }
+stage('Deploy to Cluster') {
+steps {
+sh 'envsubst < ${WORKSPACE}/deploy.yaml | kubectl apply -f -'
+}
+}
 }
