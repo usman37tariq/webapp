@@ -26,8 +26,8 @@ agent any
 // }
 stage('Deploy to Cluster') {
 steps {
-  sh 'echo ls ${WORKSPACE}'
-sh 'envsubst < ./deploy.yaml | kubectl apply -f -'
+  sh 'ls ${WORKSPACE}'
+//sh 'envsubst < ./deploy.yaml | kubectl apply -f -'
 }
 }
 }
