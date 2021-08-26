@@ -26,8 +26,8 @@ agent any
 // }
 stage('Deploy to Cluster') {
 steps {
-  sh 'ls ${WORKSPACE}'
-//sh 'envsubst < ./deploy.yaml | kubectl apply -f -'
+ // sh 'ls ${WORKSPACE}'
+sh 'cd /var/jenkins_home/workspace/Demo1_master && kubectl apply -f deploy.yaml'
 }
 }
 }
