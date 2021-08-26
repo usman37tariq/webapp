@@ -1,7 +1,7 @@
 pipeline {
 
 agent any
-
+  stages{
 stage('Checkout Source') {
 steps {
 git url:'https://github.com/usman37tariq/-hellowhale.git', branch:'master'
@@ -27,6 +27,7 @@ myapp.push("${env.BUILD_ID}")
 stage('Deploy to Cluster') {
 steps {
 sh 'envsubst < ${WORKSPACE}/deploy.yaml | kubectl apply -f -'
+}
 }
 }
 }
