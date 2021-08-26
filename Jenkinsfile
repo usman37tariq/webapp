@@ -26,7 +26,7 @@ myapp.push("${env.BUILD_ID}")
 }
 stage('Deploy to Cluster') {
 steps {
-sh 'envsubst < deploy.yaml | kubectl apply -f -'
+sh 'envsubst < ./deploy.yaml | kubectl apply -f -'
 }
 }
 }
