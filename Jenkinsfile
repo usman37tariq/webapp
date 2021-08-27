@@ -4,7 +4,7 @@ agent any
   stages{
 stage('Checkout Source') {
 steps {
-git url:'https://github.com/usman37tariq/-hellowhale.git', branch:'master'
+git url:'https://github.com/usman37tariq/webapp.git', branch:'master'
 }
 }
 stage("Build image") {
