@@ -27,7 +27,7 @@ myapp.push("${env.BUILD_ID}")
 stage('Deploy to Cluster') {
 steps {
  // sh 'ls ${WORKSPACE}'
-sh 'cd C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\Demo2 && kubectl apply -f deploy.yaml'
+sh 'cd C:/Windows/System32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/Demo2 && kubectl apply -f deploy.yaml'
 }
 }
 }
