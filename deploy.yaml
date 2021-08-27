@@ -22,7 +22,7 @@ spec:
         readinessProbe:
           httpGet:
             path: /
-            port: 80
+            port: 85
 ---
 apiVersion: v1
 kind: Service
@@ -38,7 +38,7 @@ spec:
 
   ports:
     - name: http
-      port: 80
+      port: 85
       nodePort: 30080
 
   type: NodePort
